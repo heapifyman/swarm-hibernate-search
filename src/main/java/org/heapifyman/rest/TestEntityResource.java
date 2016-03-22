@@ -24,14 +24,14 @@ public class TestEntityResource {
 
     @GET
     @Path("/")
-    @Produces({ MediaType.APPLICATION_XML })
+    @Produces({MediaType.APPLICATION_XML})
     public List<TestEntity> getAll() {
         return testEntityService.getAll();
     }
 
     @GET
     @Path("/search")
-    @Produces({ MediaType.APPLICATION_XML })
+    @Produces({MediaType.APPLICATION_XML})
     public List<TestEntity> searchByName(@QueryParam("q") String queryString) {
         return testEntityService.searchByName(queryString);
     }
